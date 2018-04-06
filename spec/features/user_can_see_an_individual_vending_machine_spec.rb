@@ -32,6 +32,6 @@ feature 'When a user visits a vending machine show page' do
 
     visit machine_path(dons)
 
-    expect(page).to have_content('Average Price: $1.50')
+    expect(page).to have_content('Average Price: $1.5')
   end
 end

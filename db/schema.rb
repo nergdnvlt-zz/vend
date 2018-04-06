@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180406160739) do
+ActiveRecord::Schema.define(version: 20180406161902) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,10 @@ ActiveRecord::Schema.define(version: 20180406160739) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "machine_id"
+    t.index ["machine_id"], name: "index_snacks_on_machine_id"
   end
 
   add_foreign_key "machines", "owners"
+  add_foreign_key "snacks", "machines"
 end

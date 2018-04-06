@@ -7,6 +7,6 @@ RSpec.describe Snack, type: :model do
   end
 
   describe 'Relationships' do
-    it { should belong_to(:machine) }
+    it { should have_many(:machines) }
   end
 end

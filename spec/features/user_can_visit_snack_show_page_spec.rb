@@ -11,3 +11,4 @@ describe 'snack show page' do
     expect(page).to have_content(snack.name)
     expect(page).to have_content(snack.price)
   end
+end
